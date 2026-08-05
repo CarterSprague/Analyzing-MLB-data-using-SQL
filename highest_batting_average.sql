@@ -1,5 +1,0 @@
-SELECT Player, Team, BA
-FROM player.csv
-WHERE AB > 350
-ORDER BY BA DESC
-LIMIT 15;  
