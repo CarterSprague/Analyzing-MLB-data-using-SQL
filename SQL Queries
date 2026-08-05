@@ -1,1 +1,49 @@
+Highest Batting Average query:
 
+SELECT player, Team, BA
+FROM player.csv
+WHERE AB > 350
+ORDER BY BA DESC
+LIMIT 15;
+
+
+Homerun leaders query:
+
+SELECT player, Team, HR
+FROM player.csv
+ORDER BY HR DESC
+LIMIT 10;
+
+
+Team Homerun totals query:
+
+SELECT Team
+     SUM(HR) AS Total_Home_Runs
+FROM player.csv
+GROUP BY Team
+ORDER BY Total_Home_Runs DESC;
+
+
+Stolen Base Leaders query:
+
+SELECT Player, Team, SB
+FROM player.csv
+ORDER BY SB DESC
+LIMIT 10;
+
+
+Highest WAR Player query:
+
+SELECT Player, Team, WAR
+FROM player.csv
+ORDER BY WAR DESC
+LIMIT 10;
+
+
+HIGHEST OBP Players query:
+
+SELECT Player, Team, OBP
+FROM player.csv
+WHERE PA > 350
+ORDER BY OBP DESC
+LIMIT 10;
